@@ -50,13 +50,13 @@ myData$Datetime <- strptime(paste(myData$Date, myData$Time), "%d/%m/%Y %H:%M:%S"
 
 # Build plot
 png(filename = "./plot4.png", width = 480, height = 480, units = "px", bg = "white")
-par(mfrow = c(2,2), mar = c(3,5,2,2))
+par(mfrow = c(2,2), mar = c(4,5,3,1))
 #Chart 1
-plot(myData$Datetime, myData$GlobalActivePower, type="l", ylab="Global Active Power")
+plot(myData$Datetime, myData$GlobalActivePower, type="l", xlab="", ylab="Global Active Power")
 #Chart 2
 plot(myData$Datetime, myData$Voltage, type="l", xlab='Datetime', ylab="Voltage")
 #Chart 3
-plot(myData$Datetime, myData$Sub_metering_1, col='blue', type="l", ylab="Energy Submetering")
+plot(myData$Datetime, myData$Sub_metering_1, col='blue', type="l",xlab="", ylab="Energy Submetering")
 lines(myData$Datetime, myData$Sub_metering_2, type="l", col="red")
 lines(myData$Datetime, myData$Sub_metering_3, type="l", col="green")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=4, seg.len=.5, col=c("blue", "red", "green"), bg = "transparent", box.col = "transparent")
