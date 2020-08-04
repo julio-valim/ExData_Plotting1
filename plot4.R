@@ -1,6 +1,6 @@
 ## EXPLORATORY DATA ANALYSIS
 
-## Plot 3
+## Plot 4
 
 # Pre-processing functions
 # Set working directory
@@ -54,14 +54,14 @@ par(mfrow = c(2,2), mar = c(3,5,2,2))
 #Chart 1
 plot(myData$Datetime, myData$GlobalActivePower, type="l", ylab="Global Active Power")
 #Chart 2
-plot(myData$Datetime, myData$Voltage, type="l", ylab="Voltage")
+plot(myData$Datetime, myData$Voltage, type="l", xlab='Datetime', ylab="Voltage")
 #Chart 3
 plot(myData$Datetime, myData$Sub_metering_1, col='blue', type="l", ylab="Energy Submetering")
 lines(myData$Datetime, myData$Sub_metering_2, type="l", col="red")
 lines(myData$Datetime, myData$Sub_metering_3, type="l", col="green")
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, lwd=4, seg.len=.5, col=c("blue", "red", "green"), bg = "transparent", box.col = "transparent")
 #Chart 4
-plot(myData$Datetime, myData$GlobalReactivePower, type="l", ylab="Global Reactive Power")
+plot(myData$Datetime, myData$GlobalReactivePower, type="l", xlab='Datetime', ylab="Global Reactive Power")
 
 dev.off()
 
