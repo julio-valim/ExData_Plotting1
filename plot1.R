@@ -41,5 +41,5 @@ myData$Global_active_power <- as.numeric(myData$Global_active_power)
 # Build histogram plot
 png(filename = "./plot1.png", width = 480, height = 480, units = "px", bg = "white")
 par(mfrow = c(1,1), mar = c(7,7,5,3))
-hist(myData$Global_active_power, col = rgb(.2,.6,.4), xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
+hist(myData$Global_active_power, col = 'red', xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 dev.off()
